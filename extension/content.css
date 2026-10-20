@@ -1,0 +1,123 @@
+.ytdl-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  border: none;
+  cursor: pointer;
+  font-family: "Roboto", Arial, sans-serif;
+  font-weight: 500;
+  color: #fff;
+  background: #1a7f37;
+  transition: background 0.15s, transform 0.1s;
+  white-space: nowrap;
+}
+.ytdl-btn:hover { background: #156b2e; }
+.ytdl-btn:active { transform: scale(0.96); }
+.ytdl-fleche { font-size: 11px; opacity: 0.85; }
+.ytdl-encours .ytdl-fleche,
+.ytdl-ok .ytdl-fleche,
+.ytdl-erreur .ytdl-fleche { display: none; }
+
+/* Page vidéo : à côté de J'aime / Partager */
+.ytdl-principal {
+  height: 36px;
+  padding: 0 14px;
+  margin-left: 8px;
+  border-radius: 18px;
+  font-size: 14px;
+  flex-shrink: 0;
+}
+
+/* Sous chaque miniature */
+.ytdl-ligne {
+  display: block;
+  width: 100%;
+  margin: 6px 0 4px;
+}
+.ytdl-carte {
+  height: 28px;
+  padding: 0 12px;
+  border-radius: 14px;
+  font-size: 12.5px;
+}
+
+/* Shorts */
+.ytdl-flottant {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  height: 44px;
+  padding: 0 18px;
+  border-radius: 22px;
+  font-size: 15px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.35);
+  z-index: 9999;
+}
+
+.ytdl-btn.ytdl-encours { background: #b07800; cursor: progress; }
+.ytdl-btn.ytdl-ok { background: #0b5cad; }
+.ytdl-btn.ytdl-erreur { background: #c0262d; }
+
+/* Menu de qualité */
+.ytdl-menu {
+  position: absolute;
+  z-index: 100000;
+  min-width: 210px;
+  padding: 6px;
+  background: #fff;
+  color: #0f0f0f;
+  border-radius: 12px;
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.3);
+  font-family: "Roboto", Arial, sans-serif;
+}
+html[dark] .ytdl-menu { background: #282828; color: #f1f1f1; }
+.ytdl-menu-titre {
+  padding: 6px 10px 8px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  opacity: 0.6;
+}
+.ytdl-menu-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  width: 100%;
+  padding: 9px 10px;
+  border: none;
+  border-radius: 8px;
+  background: transparent;
+  color: inherit;
+  font: 14px "Roboto", Arial, sans-serif;
+  text-align: left;
+  cursor: pointer;
+}
+.ytdl-menu-item small { font-size: 11px; opacity: 0.55; }
+.ytdl-menu-item:hover { background: rgba(26, 127, 55, 0.14); }
+.ytdl-menu-item.ytdl-actif { font-weight: 600; color: #1a7f37; }
+html[dark] .ytdl-menu-item.ytdl-actif { color: #4cc26e; }
+
+/* Notifications */
+#ytdl-toast {
+  position: fixed;
+  left: 50%;
+  bottom: 24px;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  z-index: 100001;
+  pointer-events: none;
+}
+.ytdl-toast-item {
+  background: #202124;
+  color: #fff;
+  padding: 10px 16px;
+  border-radius: 8px;
+  font: 14px "Roboto", Arial, sans-serif;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.35);
+  max-width: 480px;
+}
+.ytdl-toast-erreur { background: #c0262d; }

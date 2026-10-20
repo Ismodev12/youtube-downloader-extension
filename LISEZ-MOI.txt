@@ -1,0 +1,58 @@
+YT TÉLÉCHARGEUR — Extension Chrome / Edge
+==========================================
+
+Le dossier contient 2 parties :
+  extension\  -> l'extension à charger dans Chrome ou Edge (ajoute les boutons)
+  serveur\    -> le petit programme qui télécharge vraiment les vidéos (yt-dlp)
+
+------------------------------------------
+1) INSTALLATION (une seule fois)
+------------------------------------------
+a. Installe Python : https://www.python.org/downloads/
+   -> coche bien "Add python.exe to PATH" pendant l'installation.
+b. Double-clic sur  serveur\installer.bat
+
+------------------------------------------
+2) CHARGER L'EXTENSION
+------------------------------------------
+Chrome : va sur  chrome://extensions
+Edge   : va sur  edge://extensions
+ -> Active le "Mode développeur" (en haut à droite pour Chrome, à gauche pour Edge)
+ -> Clique sur "Charger l'extension non empaquetée"
+ -> Choisis le dossier  extension
+ -> Épingle l'icône verte dans la barre d'outils.
+
+------------------------------------------
+3) UTILISATION
+------------------------------------------
+a. Double-clic sur  serveur\demarrer.vbs
+   Rien ne s'affiche : c'est normal, le serveur tourne en arrière-plan.
+   (Astuce : lance une fois  serveur\demarrage-auto.bat  et il démarrera
+    tout seul à chaque allumage du PC.)
+b. Ouvre YouTube (actualise la page si elle était déjà ouverte) :
+   - sur une vidéo : bouton vert « Télécharger » à côté de J'aime / Partager
+   - sous chaque miniature : bouton vert « Télécharger » sous le titre
+   - sur les Shorts : bouton flottant en bas à droite
+c. Clique : un menu s'ouvre pour choisir la qualité (Meilleure, 4K, 1440p,
+   1080p, 720p, 480p, 360p ou Audio MP3). Le bouton affiche la préparation
+   en %, puis le fichier arrive dans la barre de téléchargements du
+   navigateur, comme un téléchargement normal (dossier Téléchargements\YouTube).
+
+Le menu retient ton dernier choix. Tu peux aussi changer la qualité
+par défaut en cliquant sur l'icône de l'extension.
+
+------------------------------------------
+PROBLÈMES FRÉQUENTS
+------------------------------------------
+- "Serveur local éteint" : lance demarrer.vbs. Si ça persiste, lance
+  diagnostic.bat : il affiche l'erreur exacte (envoie-la-moi).
+- Le téléchargement échoue d'un coup : YouTube a changé quelque chose.
+  Lance arreter.bat puis demarrer.vbs (il met yt-dlp à jour automatiquement).
+- Les boutons n'apparaissent pas : actualise la page YouTube (F5).
+- Pour arrêter le serveur : double-clic sur  serveur\arreter.bat
+
+Note : utilise-le pour tes propres vidéos, celles sous licence libre,
+ou pour un usage personnel autorisé. Le téléchargement de vidéos est
+contraire aux conditions de YouTube ; c'est pour ça que ce type
+d'extension n'est pas accepté sur le Chrome Web Store et s'installe
+en "mode développeur".

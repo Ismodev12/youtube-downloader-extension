@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <style>
+    body { width: 280px; margin: 0; padding: 16px; font: 14px "Segoe UI", Arial, sans-serif; color: #202124; background: #fff; }
+    h1 { font-size: 16px; margin: 0 0 12px; }
+    .statut { display: flex; align-items: center; gap: 8px; padding: 8px 10px; border-radius: 8px; background: #f1f3f4; margin-bottom: 14px; }
+    .point { width: 10px; height: 10px; border-radius: 50%; background: #999; flex-shrink: 0; }
+    .on .point { background: #1a7f37; }
+    .off .point { background: #c0262d; }
+    label { display: block; font-weight: 600; margin-bottom: 6px; }
+    select { width: 100%; padding: 6px; font-size: 14px; border-radius: 6px; border: 1px solid #ccc; }
+    button { margin-top: 14px; width: 100%; padding: 8px; border: none; border-radius: 6px; background: #1a7f37; color: #fff; font-size: 14px; cursor: pointer; }
+    button:disabled { background: #aaa; cursor: default; }
+    p.aide { font-size: 12px; color: #5f6368; margin: 12px 0 0; }
+  </style>
+</head>
+<body>
+  <h1>YT Téléchargeur</h1>
+  <div class="statut" id="statut"><span class="point"></span><span id="statut-txt">Vérification…</span></div>
+
+  <label for="qualite">Qualité par défaut</label>
+  <select id="qualite">
+    <option value="best">Meilleure qualité (MP4)</option>
+    <option value="2160">4K – 2160p (MP4)</option>
+    <option value="1440">1440p (MP4)</option>
+    <option value="1080">1080p (MP4)</option>
+    <option value="720">720p (MP4)</option>
+    <option value="480">480p (MP4)</option>
+    <option value="360">360p (MP4)</option>
+    <option value="mp3">Audio seul (MP3)</option>
+  </select>
+
+  <button id="dossier" disabled>Ouvrir le dossier des téléchargements</button>
+  <p class="aide">Les vidéos arrivent dans la barre de téléchargements du navigateur (dossier Téléchargements\YouTube).</p>
+
+  <script src="popup.js"></script>
+</body>
+</html>

@@ -1,0 +1,6 @@
+serveur/serveur-log.txt
+__pycache__/
+*.pyc
+*.zip
+.venv/
+publier-sur-github.bat
